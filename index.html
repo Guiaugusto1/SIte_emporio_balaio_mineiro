@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Empório Balaio Mineiro – Queijos, vinhos, cachaças e doces no Capão Redondo</title>
+  <meta name="description" content="Empório Balaio Mineiro: queijos, vinhos, cachaças e doces no Capão Redondo, em São Paulo. Veja o horário de funcionamento, o endereço e fale com a loja." />
+  <meta name="theme-color" content="#2B1507" />
+  <link rel="icon" type="image/png" href="img/favicon.png" />
+  <link rel="apple-touch-icon" href="img/logo-192.png" />
+
+  <!-- Prévia ao compartilhar o link no WhatsApp e nas redes -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:title" content="Empório Balaio Mineiro" />
+  <meta property="og:description" content="Queijos, vinhos, cachaças e doces no Capão Redondo, em São Paulo." />
+  <meta property="og:image" content="img/vitrine.jpg" />
+
+  <link rel="preload" href="fonts/kalam-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="css/estilo.css" />
+</head>
+<body>
+  <a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+  <div class="aviso" id="aviso" hidden></div>
+
+  <header class="topo">
+    <a class="topo__marca" href="#inicio" aria-label="Empório Balaio Mineiro, voltar ao início">
+      <img src="img/logo.png" alt="" width="44" height="44" />
+      <span>Balaio Mineiro</span>
+    </a>
+    <nav class="topo__menu" aria-label="Seções do site">
+      <a href="#sobre">A loja</a>
+      <a href="#produtos">Produtos</a>
+      <a href="#horario">Horário</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="capa" id="inicio">
+      <div class="capa__fundo" role="img" aria-label="Taças de vinho tinto e queijos sobre uma mesa de madeira"></div>
+      <div class="capa__conteudo">
+        <img class="capa__logo" src="img/logo.png" alt="Logo do Empório Balaio Mineiro" width="220" height="220" />
+        <div>
+          <h1 class="capa__titulo" data-loja="chamada">Bons sabores, escolhidos a dedo</h1>
+          <p class="capa__texto">Queijos, vinhos, cachaças e doces no Capão Redondo, em São Paulo.</p>
+          <p class="status" id="status-capa" aria-live="polite"></p>
+          <div class="botoes" id="botoes-capa"></div>
+        </div>
+      </div>
+      <svg class="onda" viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path class="onda__vinho" d="M0,56 C240,108 520,4 820,40 C1080,72 1260,20 1440,44 L1440,120 L0,120 Z" />
+        <path class="onda__creme" d="M0,84 C260,124 560,40 860,70 C1110,96 1290,58 1440,74 L1440,120 L0,120 Z" />
+      </svg>
+    </section>
+
+    <section class="secao sobre" id="sobre" aria-labelledby="titulo-sobre">
+      <div class="sobre__texto">
+        <h2 id="titulo-sobre">A loja</h2>
+        <div id="sobre-paragrafos"></div>
+      </div>
+      <figure class="sobre__foto">
+        <img src="img/vitrine.jpg" alt="Garrafas e taças de vinho ao lado de peças de queijo" width="1400" height="602" loading="lazy" />
+      </figure>
+    </section>
+
+    <section class="secao produtos" id="produtos" aria-labelledby="titulo-produtos">
+      <h2 id="titulo-produtos">O que você encontra aqui</h2>
+      <ul class="produtos__lista" id="produtos-lista"></ul>
+    </section>
+
+    <section class="secao visita" id="horario" aria-labelledby="titulo-horario">
+      <div class="visita__bloco">
+        <h2 id="titulo-horario">Horário de funcionamento</h2>
+        <p class="status status--claro" id="status-horario"></p>
+        <table class="horarios">
+          <caption class="visualmente-oculto">Horário de funcionamento por dia da semana</caption>
+          <tbody id="tabela-horarios"></tbody>
+        </table>
+      </div>
+      <div class="visita__bloco" id="onde">
+        <h2>Onde estamos</h2>
+        <address class="endereco" id="endereco"></address>
+        <a class="botao botao--contorno" id="link-mapa" href="#" target="_blank" rel="noopener">Abrir no Google Maps</a>
+      </div>
+    </section>
+
+    <section class="contato" id="contato" aria-labelledby="titulo-contato">
+      <svg class="onda onda--topo" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,40 C300,0 600,70 900,34 C1140,6 1300,30 1440,18 L1440,0 L0,0 Z" />
+      </svg>
+      <div class="contato__conteudo">
+        <h2 id="titulo-contato">Fale com a gente</h2>
+        <p>Tire dúvidas, consulte produtos ou faça sua encomenda.</p>
+        <ul class="contato__lista" id="contato-lista"></ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <img src="img/logo.png" alt="" width="72" height="72" loading="lazy" />
+    <p><strong>Empório Balaio Mineiro</strong><br /><span id="rodape-endereco"></span></p>
+  </footer>
+
+  <a class="whats-flutuante" id="whats-flutuante" href="#" target="_blank" rel="noopener" hidden aria-label="Conversar pelo WhatsApp">
+    <svg viewBox="0 0 24 24" width="28" height="28" aria-hidden="true"><path fill="currentColor" d="M17.47 14.38c-.3-.15-1.75-.86-2.02-.96-.27-.1-.47-.15-.67.15-.2.3-.77.96-.94 1.16-.17.2-.35.22-.64.07-.3-.15-1.25-.46-2.38-1.47-.88-.79-1.47-1.76-1.65-2.06-.17-.3-.02-.46.13-.6.13-.14.3-.35.45-.52.15-.18.2-.3.3-.5.1-.2.05-.37-.03-.52-.07-.15-.67-1.6-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.48.71.31 1.26.49 1.7.63.71.23 1.36.2 1.87.12.57-.09 1.75-.72 2-1.41.25-.69.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35zM12.05 21.5h-.01a9.4 9.4 0 0 1-4.8-1.32l-.34-.2-3.57.94.95-3.48-.22-.36a9.43 9.43 0 1 1 7.99 4.42zm8.02-17.45A11.27 11.27 0 0 0 12.04.75C5.8.75.72 5.83.72 12.07c0 2 .52 3.94 1.51 5.65L.62 23.6l6.02-1.58a11.3 11.3 0 0 0 5.4 1.38h.01c6.24 0 11.32-5.08 11.33-11.32 0-3.03-1.18-5.87-3.31-8.01z"/></svg>
+  </a>
+
+  <script src="js/config.js"></script>
+  <script src="js/site.js"></script>
+</body>
+</html>
